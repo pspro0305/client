@@ -1,0 +1,30 @@
+<form #registerForm="ngForm" (ngSubmit)="register()" novalidate autocomplete="off">
+<div class="mb-3 form-floating">
+    <input 
+    type="text"
+     class="form-control"
+      id="username" 
+      name="username" 
+      [(ngModel)]="model.username" 
+      placeholder="Username"
+      required>
+</div>
+<label>Username</label>
+<div class="mb-3 form-floating">
+    <input 
+    type="password"
+     class="form-control"
+      id="password"
+      name="password" 
+      [(ngModel)]="model.password" 
+      placeholder="Password"
+      required>
+</div>
+<label>Password</label>
+<div class="form-group text-center">
+    <button class="btn btn-success me-2" type="submit">Register</button>
+    <button class="btn btn-warning me-2" (click)="cancel()" type="button">Cancel</button>
+    
+</div>
+    </form>
+
