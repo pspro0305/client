@@ -1,0 +1,17 @@
+<div>
+    <button class="btn btn-primary" (click)="get404error()">Get 404 Error</button>
+    <button class="btn btn-primary" (click)="get500error()">Get 500 Error</button>
+    <button class="btn btn-primary" (click)="get400error()">Get 400 Error</button>
+    <button class="btn btn-primary" (click)="get401error()">Get 401 Error</button>
+    <button class="btn btn-primary" (click)="get400Validationerror()">Get Validation Error</button>
+    @if (validationErrors.length > 0) {
+        <div class="row-mt-5">
+            <ul class="text-danger">
+                @for(error of validationErrors; track $index)
+                {
+                    <li>{{error}}</li>
+                }
+            </ul>
+        </div>
+    }
+</div>
